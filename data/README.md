@@ -1,0 +1,44 @@
+To download ``TRMM`` and ``GPM`` data, you need an EarthData account. Access the links below, and select subset on that page. The website will give you a text file of all the links you need. Follow the instructions provided by the website (create cookie files). Open the ``data/TRMM`` or ``data/GPM`` folder in your terminal, create a copy of the text file as ``link.txt``, add a new line at the end of the file, and run ``./download.sh`` to start downloading the files.
+
+- ``sstoi.indices.txt``: El Nino indices from NCEP.
+  - [Source](https://www.cpc.ncep.noaa.gov/data/indices/sstoi.indices) 
+  - [Visualization](https://www.ncei.noaa.gov/access/monitoring/enso/sst)
+- ``oisst.nc``: 
+- ``TRMM`` : TRMM_3B42_Daily 7 (TRMM (TMPA) Precipitation L3 1 day 0.25 degree x 0.25 degree V7)
+  - [Source](https://disc.gsfc.nasa.gov/datasets/TRMM_3B42_Daily_7/summary) 
+  - Selected Subset:
+    - Dataset: TRMM (TMPA) Precipitation L3 1 day 0.25 degree x 0.25 degree V7
+    - Download Method: Get File Subsets using OPeNDAP
+    - Date Range: 1998-01-01 to 2019-12-31
+    - Region: -82, -50, -34, 13 (Search and Crop) (or -81, -6, -65, 14)
+    - Variables:
+      - precipitation
+    - Format: netCDF
+- ``GPM``: GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree V07
+  - [Source](https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGDF_07/summary)
+  - Selected Subset:
+    - Dataset: GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree V07
+    - Download Method: Get File Subsets using OPeNDAP
+    - Date Range: 2000-06-01 to 2023-11-30
+    - Region: -82, -50, -34, 13 (Search and Crop) (or -81, -6, -65, 14)
+    - Variables:
+      - precipitation
+    - Format: netCDF
+- ``TRMM_Monthly``: TRMM (TMPA/3B43) Rainfall Estimate L3 1 month 0.25 degree x 0.25 degree V7
+  - [Source](https://disc.gsfc.nasa.gov/datasets/TRMM_3B43_7/summary)
+  - Select Subset:
+    - Dataset: TRMM (TMPA/3B43) Rainfall Estimate L3 1 month 0.25 degree x 0.25 degree V7
+    - Download Method: Get File Subsets using OPeNDAP
+    - Date Range: 1998-01-01 to 2019-12-31
+    - Region: -80, -5, -66, 13 (Search and Crop)
+    - Variables:
+      - precipitation
+    - Format: netCDF
+- ``col-administrative-divisions-shapefiles`` Shapefile for 2nd-level administrative divisions (municiples) of Colombia
+  - [Source] (https://data.humdata.org/dataset/cod-ab-col)
+  - File to download and unzip: 
+    - [COL Administrative Divisions Shapefiles.zip](https://data.humdata.org/dataset/50ea7fee-f9af-45a7-8a52-abb9c790a0b6/resource/32fba556-0109-4d1c-84cb-c8abddf7775b/download/col-administrative-divisions-shapefiles.zip)
+  - File used: ``data/col-administrative-divisions-shapefiles/col_admbnda_adm2_mgn_20200416.shp``
+  - Usage: define Pacific Region of Colombia
+    - https://geoportal.dane.gov.co/servicios/atlas-estadistico/
+    - https://geoportal.dane.gov.co/servicios/atlas-estadistico/src/Tomo_I_Demografico/mapa/2.14_PoblacionRegionPacifica.pdf
