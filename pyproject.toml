@@ -1,0 +1,22 @@
+[project]
+name = "rc_rainfall"
+dynamic = ["version"]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "pandas",
+    "xarray",
+    "netcdf4",
+    "h5netcdf",
+    "dask",
+    "pandas",
+    "cartopy",
+    "regionmask",
+    "matplotlib",
+    "jupyter",
+    "ipympl",
+    "geemap",
+    "xee",
+    "geopandas",
+    "mapclassify",
+]
